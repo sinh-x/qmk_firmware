@@ -24,14 +24,13 @@ enum custom_keycodes {
     KC_LEND
 };
 
-const uint16_t PROGMEM mouse_wh_down[] = {KC_MS_BTN1, KC_MS_BTN2, KC_MS_DOWN, COMBO_END};
-const uint16_t PROGMEM mouse_wh_up[] = {KC_MS_BTN1, KC_MS_BTN2, KC_MS_UP, COMBO_END};
-const uint16_t PROGMEM tab_grave[] = {KC_TAB, KC_GRV, COMBO_END};
+/*const uint16_t PROGMEM mouse_wh_down[] = {KC_MS_BTN1, KC_MS_BTN2, KC_MS_DOWN, COMBO_END};
+const uint16_t PROGMEM mouse_wh_up[] = {KC_MS_BTN1, KC_MS_BTN2, KC_MS_UP, COMBO_END};*/
+
+const uint16_t PROGMEM esc_combo[] = {KC_GRV, KC_1, COMBO_END}; //escape combo
 
 combo_t key_combos[] = {
-    COMBO(mouse_wh_down, KC_MS_WH_DOWN),
-    COMBO(mouse_wh_up, KC_MS_WH_UP),
-    COMBO(tab_grave, KC_ESC),
+    COMBO(esc_combo, KC_ESC),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -46,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
  * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |RShift|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *            | LGUI | LAlt | LGUI |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
+ *            | RAISE | LAlt | LGUI |Space| /LOWER  /       \RAISE \  | Enter| RGUI | RAlt |LOWER |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
@@ -56,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  KC_QUOT,
   KC_LSFT,   KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,  KC_BSPC,
   KC_LCTL,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, KC_MUTE,     XXXXXXX,KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_RSFT,
-                 TL_UPPR,KC_LALT,KC_LGUI, KC_SPC, TL_LOWR,       TL_UPPR, KC_ENT, KC_RCTL, KC_RALT, KC_RGUI
+                 TL_UPPR,KC_LALT,KC_LGUI, KC_SPC, TL_LOWR,       TL_UPPR, KC_ENT, KC_RGUI, KC_RALT, TL_LOWR
 ),
 /*
  * COLEMAK
@@ -69,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
  * | LCTR |   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   /  |   K  |   H  |   ,  |   .  |RShift|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *            | LGUI | LAlt | LGUI |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
+ *            | RAISE | LAlt | LGUI |Space| /LOWER  /       \RAISE \  | Enter| RGUI | RAlt |LOWER |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
@@ -79,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,   KC_Q,   KC_W,    KC_F,    KC_P,    KC_B,                      KC_J,    KC_L,    KC_U,    KC_Y, KC_SCLN,  KC_QUOT,
   KC_LSFT,   KC_A,   KC_R,    KC_S,    KC_T,    KC_G,                      KC_M,    KC_N,    KC_E,    KC_I,    KC_O,  KC_BSPC,
   KC_LCTL,   KC_X,    KC_C,    KC_D,    KC_V,   KC_Z, KC_MUTE,      XXXXXXX, KC_SLSH, KC_K,    KC_H, KC_COMM,  KC_DOT, KC_RSFT,
-                 TL_UPPR,KC_LALT,KC_LGUI, KC_SPC, TL_LOWR,         TL_UPPR, KC_ENT, KC_RCTL, KC_RALT, KC_RGUI
+                 TL_UPPR,KC_LALT,KC_LGUI, KC_SPC, TL_LOWR,         TL_UPPR, KC_ENT, KC_RGUI, KC_RALT, TL_LOWR
 ),
 /* LOWER
  * ,-----------------------------------------.                    ,-----------------------------------------.
@@ -91,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
  * | Shift|  =   |  -   |  +   |   {  |   }  |-------|    |-------|   [  |   ]  |   ;  |   :  |   \  | Shift|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *            | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
+ *            | RAISE | LAlt | LGUI |Space| /LOWER  /       \RAISE \  | Enter| RGUI | RAlt |LOWER |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
@@ -106,13 +105,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Esc  | Ins  | Pscr | Menu |      |      |                    |      | PWrd |  Up  | NWrd | DLine| Bspc |
+ * | Esc  | Ins  | Pscr | Menu |      |      |                    | PG_UP| PWrd |  Up  | NWrd | DLine| Bspc |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  | LAt  | LCtl |LShift|      | Caps |-------.    ,-------|      | Left | Down | Rigth|  Del | Bspc |
+ * | Tab  | LAt  | LCtl |LShift|      | Caps |-------.    ,-------| PG_DN| Left | Down | Rigth|  Del | Bspc |
  * |------+------+------+------+------+------|  MUTE  |    |       |------+------+------+------+------+------|
- * |Shift | Undo |  Cut | Copy | Paste|      |-------|    |-------|      | LStr |      | LEnd |      | Shift|
+ * |Shift | Undo |  Cut | Copy | Paste| Redo |-------|    |-------|      | LStr |      | LEnd |      | Shift|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *            | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
+ *            | RAISE | LAlt | LGUI |Space| /LOWER  /       \RAISE \  | Enter| RGUI | RAlt |LOWER |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
@@ -120,20 +119,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, _______ , _______ , _______ , _______ , _______,                           _______,  _______  , _______,  _______ ,  _______ ,_______,
   _______,  KC_INS,  KC_PSCR,   KC_APP,  XXXXXXX, XXXXXXX,                        KC_PGUP, KC_PRVWD,   KC_UP, KC_NXTWD,C(KC_BSPC), KC_BSPC,
   _______, KC_LALT,  KC_LCTL,  KC_LSFT,  XXXXXXX, KC_CAPS,                       KC_PGDN,  KC_LEFT, KC_DOWN, KC_RGHT,  KC_DEL, KC_BSPC,
-  _______, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), XXXXXXX,  _______,       _______,  XXXXXXX, KC_LSTRT, XXXXXXX, KC_LEND,   XXXXXXX, _______,
+  _______, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), KC_AGIN,  _______,       _______,  XXXXXXX, KC_LSTRT, XXXXXXX, KC_LEND,   XXXXXXX, _______,
                          _______, _______, _______, _______, _______,       _______, _______, _______, _______, _______
 ),
 /* ADJUST
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
+ * |      |      |      |      |      |      |                    |      | VOLDO| MUTE | VOLUP|      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | QK_BOOT|      |QWERTY|COLEMAK|      |      |                    |      |      |      |      |      |      |
+ * | QK_BOOT|      |QWERTY|COLEMAK|      |      |                 |SCRL_UP| M_Btn1| MS_UP| M_Btn2|   |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |MACWIN|      |      | TG(1)|-------.    ,-------|      | VOLDO| MUTE | VOLUP|      |      |
+ * |      |      |MACWIN|      |      | TG(1)|-------.    ,-------|SCRL_DN| MS_L| MS_D | MS_R |      |      |
  * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
  * |      |      |      |      |      | TG(0)|-------|    |-------|      | PREV | PLAY | NEXT |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *            | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
+ *            | RAISE | LAlt | LGUI |Space| /LOWER  /       \RAISE \  | Enter| RGUI | RAlt |LOWER |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
