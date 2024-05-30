@@ -126,11 +126,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      | VOLDO| MUTE | VOLUP|      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | QK_BOOT|      |QWERTY|COLEMAK|      |      |                 |SCRL_UP| M_Btn1| MS_UP| M_Btn2|   |      |
+ * | QK_BOOT|      |QWERTY|COLEMAK|      |      |                 |SCRL_UP| M_Bt1| MS_UP| M_Bt2|   | NEXT |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |MACWIN|      |      | TG(1)|-------.    ,-------|SCRL_DN| MS_L| MS_D | MS_R |      |      |
- * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
- * |      |      |      |      |      | TG(0)|-------|    |-------|      | PREV | PLAY | NEXT |      |      |
+ * |      |      |MACWIN|      |      | TG(1)|-------.    ,-------|SCRL_DN| MS_L| MS_D | MS_R |      | PLAY |
+ * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
+ * |      | CT_M1| M_Bt1| M_Bt2|      | TG(0)|-------|    |-------|      | CT_M1|      |      |      | PREV |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *            | RAISE | LAlt | LGUI |Space| /LOWER  /       \RAISE \  | Enter| RGUI | RAlt |LOWER |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
@@ -138,9 +138,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
   [_ADJUST] = LAYOUT(
   XXXXXXX , XXXXXXX,  XXXXXXX ,  XXXXXXX , XXXXXXX, XXXXXXX,                        XXXXXXX, KC_VOLD, KC_MUTE, KC_VOLU, XXXXXXX, XXXXXXX,
-  QK_BOOT  , XXXXXXX,KC_QWERTY,KC_COLEMAK,CG_TOGG,XXXXXXX,                          KC_MS_WH_UP, KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2, XXXXXXX, XXXXXXX,
-  XXXXXXX , XXXXXXX,CG_TOGG, XXXXXXX,    XXXXXXX,  TG(1),                           KC_MS_WH_DOWN, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, XXXXXXX, XXXXXXX,
-  XXXXXXX , XXXXXXX, KC_MS_BTN1, KC_MS_BTN2, XXXXXXX,  TG(0), XXXXXXX,     XXXXXXX, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX,
+  QK_BOOT  , XXXXXXX,KC_QWERTY,KC_COLEMAK,CG_TOGG,XXXXXXX,                          KC_MS_WH_UP, KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2, XXXXXXX, KC_MNXT,
+  XXXXXXX , XXXXXXX,CG_TOGG, XXXXXXX,    XXXXXXX,  TG(1),                           KC_MS_WH_DOWN, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, XXXXXXX, KC_MPLY,
+  XXXXXXX , LCTL(KC_MS_BTN1), KC_MS_BTN1, KC_MS_BTN2, XXXXXXX,  TG(0), XXXXXXX,     XXXXXXX, XXXXXXX, LCTL(KC_MS_BTN1), XXXXXXX, XXXXXXX, XXXXXXX, KC_MPRV,
                    _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______
   )
 };
