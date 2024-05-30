@@ -64,9 +64,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_QWERTY] = LAYOUT(
   TD(TD_GRAVE_ESC),   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                    KC_EQL,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  
-  KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  KC_QUOT,
-  TD(TD_SHIFT_CAP),   KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,  KC_BSPC,
-  KC_LCTL,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, KC_MUTE,     XXXXXXX,KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_RSFT,
+  KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                              KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  KC_QUOT,
+  TD(TD_SHIFT_CAP),   KC_A,   KC_S,    KC_D,   LSFT_T(KC_F), KC_G,                     KC_H,    RSFT_T(KC_J),    KC_K,    KC_L, KC_SCLN,  KC_BSPC,
+  KC_LCTL,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, KC_MUTE,           XXXXXXX,KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_RSFT,
                  TL_UPPR,KC_LALT,KC_LGUI, KC_LGUI, LT(2,KC_SPC),       LT(3,KC_ENT), KC_RGUI, KC_RGUI, KC_RALT, TL_LOWR
 ),
 /*
@@ -79,17 +79,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |LShift|   A  |   R  |   S  |   T  |   D  |-------.    ,-------|   H  |   N  |   E  |   I  |   O  | Bspc |
  * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
  * | LCTR |   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   /  |   K  |   H  |   ,  |   .  |RShift|
- * `-----------------------------------------/       /     \      \-----------------------------------------'
+ * `-----------------------------------------/       /     \      \-----------------------------------------'`
  *            | RAISE | LAlt | LGUI |Space| /LOWER  /       \RAISE \  |Space | RGUI | RAlt |LOWER |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
 
 [_COLEMAK] = LAYOUT(
-  TD(TD_GRAVE_ESC),   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                     KC_EQL,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
-  KC_TAB,   KC_Q,   KC_W,    KC_F,    KC_P,    KC_B,                      KC_J,    KC_L,    KC_U,    KC_Y, KC_SCLN,  KC_QUOT,
-  TD(TD_SHIFT_CAP),   KC_A,   KC_R,    KC_S,    KC_T,    KC_G,                      KC_M,    KC_N,    KC_E,    KC_I,    KC_O,  KC_BSPC,
-  KC_LCTL,   KC_X,    KC_C,    KC_D,    KC_V,   KC_Z, KC_MUTE,      XXXXXXX, KC_SLSH, KC_K,    KC_H, KC_COMM,  KC_DOT, KC_RSFT,
+  TD(TD_GRAVE_ESC),   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                      KC_EQL,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
+  KC_TAB,   KC_Q,   KC_W,    KC_F,    KC_P,    KC_B,                                KC_J,    KC_L,    KC_U,    KC_Y, KC_SCLN,  KC_QUOT,
+  TD(TD_SHIFT_CAP),   KC_A,   KC_R,    KC_S,    LSFT_T(KC_T),  KC_G,                KC_M,    RSFT_T(KC_N),    KC_E,    KC_I,    KC_O,  KC_BSPC,
+  KC_LCTL,   KC_X,    KC_C,    KC_D,    KC_V,   KC_Z, KC_MUTE,          XXXXXXX, KC_SLSH, KC_K,    KC_H, KC_COMM,  KC_DOT, KC_RSFT,
                  TL_UPPR,KC_LALT,KC_LGUI, KC_LGUI, LT(2,KC_SPC),       LT(3,KC_ENT), KC_RGUI, KC_RGUI, KC_RALT, TL_LOWR
 ),
 /* LOWER
@@ -143,7 +143,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |      |      |MACWIN|      |      | TG(1)|-------.    ,-------|SCRL_DN| MS_L| MS_D | MS_R |      | PLAY |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
  * |      | CT_M1| M_Bt1| M_Bt2|      | TG(0)|-------|    |-------|      | CT_M1|      |      |      | PREV |
- * `-----------------------------------------/       /     \      \-----------------------------------------'
+ * `-----------------------------------------/       /     \      \----------------------------------------'
  *            | RAISE | LAlt | LGUI |Space| /LOWER  /       \RAISE \  | Enter| RGUI | RAlt |LOWER |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
