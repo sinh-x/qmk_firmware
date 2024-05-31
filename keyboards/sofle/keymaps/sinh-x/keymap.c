@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_LOWER] = LAYOUT(
   _______,   KC_F1,   KC_F2,   KC_F3,     KC_F4,     KC_F5,                                KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
-   KC_GRV,    KC_7,    KC_8,    KC_9,  KC_PLUS,    KC_ASTR,                              KC_LBRC,  KC_DLR, KC_LPRN, KC_RPRN,  KC_AMPR,  KC_F12,
+  KC_CALC,    KC_7,    KC_8,    KC_9,  KC_PLUS,    KC_ASTR,                              KC_LBRC,  KC_DLR, KC_LPRN, KC_RPRN,  KC_AMPR,  KC_F12,
   _______,    KC_4,    KC_5,    KC_6,   KC_MINS,   KC_SLSH,                              KC_RBRC,  KC_AT, KC_COMM, KC_DOT, KC_PIPE, _______,
   _______,    KC_1,    KC_2,    KC_3,      KC_0,    KC_EQL,  _______,           _______, KC_CIRC,  KC_HASH, KC_LT, KC_GT, KC_BSLS, _______,
                        _______, _______, _______, _______, TL_LOWR,                  TL_UPPR, _______, _______, _______, _______
@@ -125,7 +125,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, _______ , _______ , _______ , _______ , _______,                           _______,  _______  , _______,  _______ ,  _______ ,_______,
   _______,  KC_INS,  KC_PSCR,   KC_APP,  XXXXXXX, XXXXXXX,                        KC_PGUP, KC_PRVWD,   KC_UP, KC_NXTWD,C(KC_BSPC), KC_BSPC,
   _______, KC_LALT,  KC_LCTL,  KC_LSFT,  XXXXXXX, KC_CAPS,                       KC_PGDN,  KC_LEFT, KC_DOWN, KC_RGHT, C(KC_DEL), KC_BSPC,
-  _______, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), KC_AGIN,  _______,       _______,  XXXXXXX, KC_LSTRT, XXXXXXX, KC_LEND,   XXXXXXX, _______,
+  _______, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), KC_AGIN,  _______,       _______,    KC_WBAK, KC_LSTRT, KC_WFWD, KC_LEND,   XXXXXXX, _______,
                          _______, _______, _______, _______, TL_LOWR,       TL_UPPR, _______, _______, _______, _______
 ),
 /* ADJUST
