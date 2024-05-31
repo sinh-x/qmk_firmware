@@ -35,7 +35,7 @@ enum {
 // Tap Dance definitions
 tap_dance_action_t tap_dance_actions[] = {
     // Tap once for Grave, twice for Escape
-    [TD_GRAVE_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_ESC, KC_GRV,),
+    [TD_GRAVE_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_ESC, KC_GRV),
     [TD_SHIFT_CAP] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
     [TD_QUOTE] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, KC_QUOT)
 };
@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_LOWER] = LAYOUT(
   _______,   KC_F1,   KC_F2,   KC_F3,     KC_F4,     KC_F5,                                KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
-   KC_GRV,    KC_7,    KC_8,    KC_9,  KKC_PLUS,    C_ASTR,                              KC_LBRC,  KC_DLR, KC_LPRN, KC_RPRN,  KC_AMPR,  KC_F12,
+   KC_GRV,    KC_7,    KC_8,    KC_9,  KC_PLUS,    KC_ASTR,                              KC_LBRC,  KC_DLR, KC_LPRN, KC_RPRN,  KC_AMPR,  KC_F12,
   _______,    KC_4,    KC_5,    KC_6,   KC_MINS,   KC_SLSH,                              KC_RBRC,  KC_AT, KC_COMM, KC_DOT, KC_PIPE, _______,
   _______,    KC_1,    KC_2,    KC_3,      KC_0,    KC_EQL,  _______,           _______, KC_CIRC,  KC_HASH, KC_LT, KC_GT, KC_BSLS, _______,
                        _______, _______, _______, _______, TL_LOWR,                  TL_UPPR, _______, _______, _______, _______
@@ -143,11 +143,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            `----------------------------------'           '------''---------------------------'
  */
   [_ADJUST] = LAYOUT(
-  XXXXXXX , XXXXXXX,  XXXXXXX ,  XXXXXXX , XXXXXXX, XXXXXXX,                        XXXXXXX, KC_VOLD, KC_MUTE, KC_VOLU, XXXXXXX, XXXXXXX,
-  QK_BOOT  , XXXXXXX,KC_QWERTY,KC_COLEMAK,CG_TOGG,XXXXXXX,                          KC_MS_WH_UP, KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2, XXXXXXX, KC_MNXT,
-  XXXXXXX , XXXXXXX,  CG_TOGG, XXXXXXX,    XXXXXXX,  XXXXXXX,                           KC_MS_WH_DOWN, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, XXXXXXX, KC_MPLY,
-  XXXXXXX , XXXXXXX, XXXXXXX, ,XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MPRV,
-                   _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______
+  XXXXXXX , XXXXXXX,   XXXXXXX ,   XXXXXXX,  XXXXXXX,  XXXXXXX,                        XXXXXXX, KC_VOLD, KC_MUTE, KC_VOLU, XXXXXXX, XXXXXXX,
+  QK_BOOT , XXXXXXX,  KC_QWERTY, KC_COLEMAK, CG_TOGG,  XXXXXXX,                          KC_MS_WH_UP, KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2, XXXXXXX, KC_MNXT,
+  XXXXXXX , XXXXXXX,    CG_TOGG,    XXXXXXX, XXXXXXX,  XXXXXXX,                      KC_MS_WH_DOWN, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, XXXXXXX, KC_MPLY,
+  XXXXXXX , XXXXXXX,    XXXXXXX,    XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MPRV,
+                   _______, _______, _______, _______, _______,                    _______, _______, _______, _______, _______
   ),
 /* MOUSE
  * ,-----------------------------------------.                    ,-----------------------------------------.
