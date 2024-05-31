@@ -94,8 +94,15 @@ void print_status_narrow(void) {
         case 3:
             oled_write_P(PSTR("Raise"), false);
             break;
+        case 4:
+            oled_write_P(PSTR("Cfg"), false);
+            break;
+        case 5:
+            oled_write_P(PSTR("Mouse"), false);
+            break;
         default:
             oled_write_ln_P(PSTR("Undef"), false);
+            break;
     }
     oled_write_P(PSTR("\n\n"), false);
     led_t led_usb_state = host_keyboard_led_state();
