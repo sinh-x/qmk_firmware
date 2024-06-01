@@ -86,6 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            KC_LCTL,         KC_X,         KC_C,         KC_D,         KC_V,         KC_Z, KC_MUTE,      XXXXXXX,      KC_SLSH,         KC_K,         KC_H,      KC_COMM,       KC_DOT,  KC_RSFT,
                                TL_UPPR,      KC_LALT,      KC_LGUI,      TT(5),     LT(2,KC_SPC),          LT(3,KC_ENT), TT(5), KC_RGUI, KC_RALT, TL_LOWR
 ),
+// TODO: review special character and consider replace @/# with quote and another more frequent use symbol
 /* LOWER
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |  F1  |  F2  |  F3  |  F4  |  F5  |                    |  F6  |  F7  |  F8  |  F9  | F10  | F11  |
@@ -107,6 +108,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______,    KC_1,    KC_2,    KC_3,      KC_0,    KC_EQL,  _______,           _______, KC_CIRC,  KC_HASH, KC_LT, KC_GT, KC_BSLS, _______,
                        _______, _______, _______, _______, TL_LOWR,                  TL_UPPR, _______, _______, _______, _______
 ),
+
+// TODO: review this layer as mod key here is not raeely necessary as already have homerow mod
+// TODO: review Caps key as too many accidental cap in vim
 /* RAISE
  * ,----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
