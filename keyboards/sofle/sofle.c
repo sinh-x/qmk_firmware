@@ -89,24 +89,31 @@ void print_status_narrow(void) {
             oled_write_P(PSTR("Base\n"), false);
             break;
         case 2:
-            oled_write_P(PSTR("Num"), false);
+            oled_write_P(PSTR("Num\n"), false);
             break;
         case 3:
-            oled_write_P(PSTR("Nav"), false);
+            oled_write_P(PSTR("Nav\n"), false);
             break;
         case 4:
-            oled_write_P(PSTR("Cfg"), false);
+            oled_write_P(PSTR("Cfg\n"), false);
             break;
         case 5:
-            oled_write_P(PSTR("Mouse"), false);
+            oled_write_P(PSTR("Mouse\n"), false);
             break;
         default:
-            oled_write_ln_P(PSTR("Undef"), false);
+            oled_write_ln_P(PSTR("Undef\n"), false);
             break;
     }
     oled_write_P(PSTR("\n\n"), false);
+    // Status line for Caps
     led_t led_usb_state = host_keyboard_led_state();
     oled_write_ln_P(PSTR("CPSLK"), led_usb_state.caps_lock);
+    // Status line for swapped hand
+    if (is_swap_hands_on()) {
+        oled_write_ln_P(PSTR("Swap"), false);
+    } else {
+        oled_write_ln_P(PSTR("   "), false);
+    }
 }
 
 bool oled_task_kb(void) {
