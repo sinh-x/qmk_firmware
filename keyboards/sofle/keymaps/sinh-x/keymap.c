@@ -59,8 +59,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_QWERTY] = LAYOUT(
             KC_GRV,         KC_1,         KC_2,         KC_3,         KC_4,    KC_5,                                    KC_EQL,          KC_6,         KC_7,         KC_8,              KC_9,    KC_0,
-            KC_ESC,         KC_Q,         KC_W,         KC_E,         KC_R,    KC_T,                                      KC_Y,          KC_U,         KC_I,         KC_O,              KC_P,  KC_QUOT,
-            KC_TAB,         KC_A, LCTL_T(KC_S), LALT_T(KC_D), LSFT_T(KC_F),  LGUI_T(KC_G),                        RGUI_T(KC_H),  RSFT_T(KC_J), RALT_T(KC_K), RCTL_T(KC_L),           KC_SCLN,  KC_BSPC,
+            KC_TAB,         KC_Q,         KC_W,         KC_E,         KC_R,    KC_T,                                      KC_Y,          KC_U,         KC_I,         KC_O,              KC_P,  KC_QUOT,
+            KC_ESC,         KC_A, LCTL_T(KC_S), LALT_T(KC_D), LSFT_T(KC_F),  LGUI_T(KC_G),                        RGUI_T(KC_H),  RSFT_T(KC_J), RALT_T(KC_K), RCTL_T(KC_L),           KC_SCLN,  KC_BSPC,
             SH_MON,         KC_Z,         KC_X,         KC_C,         KC_V,          KC_B,  KC_MUTE,     XXXXXXX,         KC_N,          KC_M,      KC_COMM,       KC_DOT,           KC_SLSH,  KC_RSFT,
                                TL_UPPR,      SH_TOGG,      KC_LGUI,         TT(5),     LT(2,KC_SPC),          LT(3,KC_ENT), TT(5), KC_RGUI, SH_TOGG, TL_LOWR
 ),
@@ -81,8 +81,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_COLEMAK] = LAYOUT(
             KC_GRV,         KC_1,         KC_2,         KC_3,         KC_4,         KC_5,                              KC_EQL,         KC_6,         KC_7,         KC_8,         KC_9,    KC_0,
-            KC_ESC,         KC_Q,         KC_W,         KC_F,         KC_P,         KC_B,                                KC_J,         KC_L,         KC_U,         KC_Y,      KC_SCLN,  KC_QUOT,
-            KC_TAB,         KC_A, LCTL_T(KC_R), LALT_T(KC_S), LSFT_T(KC_T), LGUI_T(KC_G),                        RGUI_T(KC_M), RSFT_T(KC_N), RALT_T(KC_E), RCTL_T(KC_I),         KC_O,  KC_BSPC,
+            KC_TAB,         KC_Q,         KC_W,         KC_F,         KC_P,         KC_B,                                KC_J,         KC_L,         KC_U,         KC_Y,      KC_SCLN,  KC_QUOT,
+            KC_ESC,         KC_A, LCTL_T(KC_R), LALT_T(KC_S), LSFT_T(KC_T), LGUI_T(KC_G),                        RGUI_T(KC_M), RSFT_T(KC_N), RALT_T(KC_E), RCTL_T(KC_I),         KC_O,  KC_BSPC,
             SH_MON,         KC_X,         KC_C,         KC_D,         KC_V,         KC_Z, KC_MUTE,      XXXXXXX,      KC_SLSH,         KC_K,         KC_H,      KC_COMM,       KC_DOT,  KC_RSFT,
                                TL_UPPR,      SH_TOGG,      KC_LGUI,      TT(5),     LT(2,KC_SPC),          LT(3,KC_ENT), TT(5), KC_RGUI, SH_TOGG, TL_LOWR
 ),
