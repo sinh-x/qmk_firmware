@@ -20,6 +20,9 @@ enum custom_keycodes {
     KC_LSTRT,
     KC_LEND,
     KC_CSF12,
+    KC_ALTF1,
+    KC_WEB1,
+    KC_WEB2,
 };
 
 // Tap Dance declarations
@@ -133,23 +136,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           _______   , _______    , _______ , _______ , _______ ,     _______ , _______       , _______    , _______    , _______                           
 ),
 
-//        ┌────┬───────┬──────┬──────┬──────┬─────┐               ┌──────┬──────┬──────┬──────┬──────┬────┐
-//        │ no │  no   │  no  │  no  │  no  │ no  │               │  no  │  no  │  no  │  no  │  no  │ no │
-//        ├────┼───────┼──────┼──────┼──────┼─────┤               ├──────┼──────┼──────┼──────┼──────┼────┤
-//        │ no │ cSF12 │  no  │  no  │  ~   │ no  │               │ wh_u │ btn1 │ ms_u │ btn2 │ btn3 │ no │
-//        ├────┼───────┼──────┼──────┼──────┼─────┤               ├──────┼──────┼──────┼──────┼──────┼────┤
-//        │ no │  no   │  no  │  no  │  no  │ no  │               │ wh_d │ ms_l │ ms_d │ ms_r │  no  │ no │
-//        ├────┼───────┼──────┼──────┼──────┼─────┼─────┐   ┌─────┼──────┼──────┼──────┼──────┼──────┼────┤
-//        │ no │ lctl  │ btn1 │ btn2 │ btn3 │ no  │ no  │   │ no  │  no  │  no  │  no  │  no  │ rctl │ no │
-//        └────┴───────┼──────┼──────┼──────┼─────┼─────┤   ├─────┼──────┼──────┼──────┼──────┼──────┴────┘
-//                     │      │      │      │     │     │   │     │      │      │      │      │            
-//                     └──────┴──────┴──────┴─────┴─────┘   └─────┴──────┴──────┴──────┴──────┘            
+//        ┌────┬───────┬──────┬──────┬──────┬───────┐               ┌──────┬──────┬──────┬──────┬──────┬────┐
+//        │ no │  no   │  no  │  no  │  no  │  no   │               │  no  │  no  │  no  │  no  │  no  │ no │
+//        ├────┼───────┼──────┼──────┼──────┼───────┤               ├──────┼──────┼──────┼──────┼──────┼────┤
+//        │ no │ cSF12 │ wEB1 │ wEB2 │  ~   │ aLTF1 │               │ wh_u │ btn1 │ ms_u │ btn2 │ btn3 │ no │
+//        ├────┼───────┼──────┼──────┼──────┼───────┤               ├──────┼──────┼──────┼──────┼──────┼────┤
+//        │ no │  no   │  no  │  no  │  no  │  no   │               │ wh_d │ ms_l │ ms_d │ ms_r │  no  │ no │
+//        ├────┼───────┼──────┼──────┼──────┼───────┼─────┐   ┌─────┼──────┼──────┼──────┼──────┼──────┼────┤
+//        │ no │ lctl  │ btn1 │ btn2 │ btn3 │  no   │ no  │   │ no  │  no  │  no  │  no  │  no  │ rctl │ no │
+//        └────┴───────┼──────┼──────┼──────┼───────┼─────┤   ├─────┼──────┼──────┼──────┼──────┼──────┴────┘
+//                     │      │      │      │       │     │   │     │      │      │      │      │            
+//                     └──────┴──────┴──────┴───────┴─────┘   └─────┴──────┴──────┴──────┴──────┘            
 [_MOUSE] = LAYOUT_sinh_x_58(
-      XXXXXXX , XXXXXXX  , XXXXXXX    , XXXXXXX    , XXXXXXX    , XXXXXXX ,                         XXXXXXX       , XXXXXXX    , XXXXXXX    , XXXXXXX     , XXXXXXX    , XXXXXXX,
-      XXXXXXX , KC_CSF12 , XXXXXXX    , XXXXXXX    , KC_TILD    , XXXXXXX ,                         KC_MS_WH_UP   , KC_MS_BTN1 , KC_MS_UP   , KC_MS_BTN2  , KC_MS_BTN3 , XXXXXXX,
-      XXXXXXX , XXXXXXX  , XXXXXXX    , XXXXXXX    , XXXXXXX    , XXXXXXX ,                         KC_MS_WH_DOWN , KC_MS_LEFT , KC_MS_DOWN , KC_MS_RIGHT , XXXXXXX    , XXXXXXX,
-      XXXXXXX , KC_LCTL  , KC_MS_BTN1 , KC_MS_BTN2 , KC_MS_BTN3 , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX       , XXXXXXX    , XXXXXXX    , XXXXXXX     , KC_RCTL    , XXXXXXX,
-                           _______    , _______    , _______    , _______ , _______ ,     _______ , _______       , _______    , _______    , _______                           
+      XXXXXXX , XXXXXXX  , XXXXXXX    , XXXXXXX    , XXXXXXX    , XXXXXXX  ,                         XXXXXXX       , XXXXXXX    , XXXXXXX    , XXXXXXX     , XXXXXXX    , XXXXXXX,
+      XXXXXXX , KC_CSF12 , KC_WEB1    , KC_WEB2    , KC_TILD    , KC_ALTF1 ,                         KC_MS_WH_UP   , KC_MS_BTN1 , KC_MS_UP   , KC_MS_BTN2  , KC_MS_BTN3 , XXXXXXX,
+      XXXXXXX , XXXXXXX  , XXXXXXX    , XXXXXXX    , XXXXXXX    , XXXXXXX  ,                         KC_MS_WH_DOWN , KC_MS_LEFT , KC_MS_DOWN , KC_MS_RIGHT , XXXXXXX    , XXXXXXX,
+      XXXXXXX , KC_LCTL  , KC_MS_BTN1 , KC_MS_BTN2 , KC_MS_BTN3 , XXXXXXX  , XXXXXXX ,     XXXXXXX , XXXXXXX       , XXXXXXX    , XXXXXXX    , XXXXXXX     , KC_RCTL    , XXXXXXX,
+                           _______    , _______    , _______    , _______  , _______ ,     _______ , _______       , _______    , _______    , _______                           
 )
 };
 
@@ -243,13 +246,40 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             break;
+        case KC_WEB1:
+            if (record->event.pressed) {
+                register_mods(mod_config(MOD_MASK_SG));
+                register_code(KC_W);
+            } else {
+                unregister_mods(mod_config(MOD_MASK_SG));
+                unregister_code(KC_W);
+            }
+           break;
+        case KC_WEB2:
+            if (record->event.pressed) {
+                register_mods(mod_config(MOD_MASK_CSG));
+                register_code(KC_W);
+            } else {
+                unregister_mods(mod_config(MOD_MASK_CSG));
+                unregister_code(KC_W);
+            }
+           break;
         case KC_CSF12:
             if (record->event.pressed) {
                 register_mods(mod_config(MOD_MASK_CS));
-                register_code(KC_ESC);
+                register_code(KC_F12);
             } else {
                 unregister_mods(mod_config(MOD_MASK_CS));
-                unregister_code(KC_ESC);
+                unregister_code(KC_F12);
+            }
+           break;
+        case KC_ALTF1:
+            if (record->event.pressed) {
+                register_mods(mod_config(MOD_MASK_ALT));
+                register_code(KC_F1);
+            } else {
+                unregister_mods(mod_config(MOD_MASK_ALT));
+                unregister_code(KC_F1);
             }
            break;
         case KC_BSPC:
