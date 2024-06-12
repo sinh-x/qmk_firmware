@@ -98,23 +98,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           _______ , _______ , _______ , _______ , TL_LOWR ,     TL_UPPR , _______ , _______  , _______ , _______
 ),
 
-//        ┌─────────┬─────┬─────┬─────┬─────┬─────┐               ┌──────┬──────┬──────┬──────┬──────┬──────┐
-//        │   no    │ no  │ no  │ no  │ no  │ no  │               │  no  │ vold │ mute │ volu │  no  │  no  │
-//        ├─────────┼─────┼─────┼─────┼─────┼─────┤               ├──────┼──────┼──────┼──────┼──────┼──────┤
-//        │ QK_BOOT │ f9  │ f8  │ f7  │ f5  │ f6  │               │ wh_u │ btn1 │ ms_u │ btn2 │ btn3 │ mnxt │
-//        ├─────────┼─────┼─────┼─────┼─────┼─────┤               ├──────┼──────┼──────┼──────┼──────┼──────┤
-//        │   no    │ f11 │ f10 │ no  │ f3  │ f4  │               │ wh_d │ ms_l │ ms_d │ ms_r │  no  │ mply │
-//        ├─────────┼─────┼─────┼─────┼─────┼─────┼─────┐   ┌─────┼──────┼──────┼──────┼──────┼──────┼──────┤
-//        │   no    │ f12 │ no  │ no  │ f1  │ f2  │ no  │   │ no  │  no  │  no  │  no  │  no  │  no  │ mprv │
-//        └─────────┴─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼──────┼──────┼──────┼──────┼──────┴──────┘
-//                        │     │     │     │     │     │   │     │      │      │      │      │
-//                        └─────┴─────┴─────┴─────┴─────┘   └─────┴──────┴──────┴──────┴──────┘
+//        ┌─────────┬────┬──────┬──────┬──────┬─────┐               ┌─────┬──────┬──────┬──────┬─────┬─────┐
+//        │ QK_BOOT │ no │  no  │  no  │  no  │ no  │               │ no  │  no  │  no  │  no  │ no  │ no  │
+//        ├─────────┼────┼──────┼──────┼──────┼─────┤               ├─────┼──────┼──────┼──────┼─────┼─────┤
+//        │   f1    │ f2 │  f3  │  f4  │  f5  │ f6  │               │ f7  │  f8  │  f9  │ f10  │ f11 │ f12 │
+//        ├─────────┼────┼──────┼──────┼──────┼─────┤               ├─────┼──────┼──────┼──────┼─────┼─────┤
+//        │   no    │ 1  │  2   │  3   │  4   │  5  │               │  6  │  7   │  8   │  9   │  0  │ no  │
+//        ├─────────┼────┼──────┼──────┼──────┼─────┼─────┐   ┌─────┼─────┼──────┼──────┼──────┼─────┼─────┤
+//        │   no    │ no │ vold │ mute │ volu │ no  │ no  │   │ no  │ no  │ mprv │ mply │ mnxt │ no  │ no  │
+//        └─────────┴────┼──────┼──────┼──────┼─────┼─────┤   ├─────┼─────┼──────┼──────┼──────┼─────┴─────┘
+//                       │      │      │      │     │     │   │     │     │      │      │      │
+//                       └──────┴──────┴──────┴─────┴─────┘   └─────┴─────┴──────┴──────┴──────┘
 [_ADJUST] = LAYOUT_sinh_x_58(
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                         XXXXXXX       , KC_VOLD    , KC_MUTE    , KC_VOLU     , XXXXXXX    , XXXXXXX,
-      QK_BOOT , KC_F9   , KC_F8   , KC_F7   , KC_F5   , KC_F6   ,                         KC_MS_WH_UP   , KC_MS_BTN1 , KC_MS_UP   , KC_MS_BTN2  , KC_MS_BTN3 , KC_MNXT,
-      XXXXXXX , KC_F11  , KC_F10  , XXXXXXX , KC_F3   , KC_F4   ,                         KC_MS_WH_DOWN , KC_MS_LEFT , KC_MS_DOWN , KC_MS_RIGHT , XXXXXXX    , KC_MPLY,
-      XXXXXXX , KC_F12  , XXXXXXX , XXXXXXX , KC_F1   , KC_F2   , XXXXXXX ,     XXXXXXX , XXXXXXX       , XXXXXXX    , XXXXXXX    , XXXXXXX     , XXXXXXX    , KC_MPRV,
-                          _______ , _______ , _______ , _______ , _______ ,     _______ , _______       , _______    , _______    , _______
+      QK_BOOT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                         XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX,
+      KC_F1   , KC_F2   , KC_F3   , KC_F4   , KC_F5   , KC_F6   ,                         KC_F7   , KC_F8   , KC_F9   , KC_F10  , KC_F11  , KC_F12 ,
+      XXXXXXX , KC_1    , KC_2    , KC_3    , KC_4    , KC_5    ,                         KC_6    , KC_7    , KC_8    , KC_9    , KC_0    , XXXXXXX,
+      XXXXXXX , XXXXXXX , KC_VOLD , KC_MUTE , KC_VOLU , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , KC_MPRV , KC_MPLY , KC_MNXT , XXXXXXX , XXXXXXX,
+                          _______ , _______ , _______ , _______ , _______ ,     _______ , _______ , _______ , _______ , _______
 ),
 
 //        ┌────┬───────┬──────┬──────┬──────┬───────┐               ┌──────┬──────┬──────┬──────┬──────┬────┐
