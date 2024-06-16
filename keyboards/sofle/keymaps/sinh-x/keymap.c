@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //        ├─────┼──────┼──────┼──────┼──────┼───────┤                       ├──────────┼───────┼─────────────┼──────────────┼─────┼─────────┤
 //        │     │ ins  │ pscr │ app  │  no  │ caps  │                       │   pgup   │ pRVWD │     up      │    nXTWD     │ no  │   no    │
 //        ├─────┼──────┼──────┼──────┼──────┼───────┤                       ├──────────┼───────┼─────────────┼──────────────┼─────┼─────────┤
-//        │     │ lalt │ lctl │ lsft │  no  │  no   │                       │   pgdn   │ left  │    down     │ RCTL_T(rght) │ no  │ C(bspc) │
+//        │     │  no  │ lctl │ lalt │ lsft │ lgui  │                       │   pgdn   │ left  │    down     │ RCTL_T(rght) │ no  │ C(bspc) │
 //        ├─────┼──────┼──────┼──────┼──────┼───────┼─────────┐   ┌─────────┼──────────┼───────┼─────────────┼──────────────┼─────┼─────────┤
 //        │     │ C(z) │ C(x) │ C(c) │ C(v) │ again │         │   │         │ www_back │ lSTRT │ www_forward │     lEND     │ no  │         │
 //        └─────┴──────┼──────┼──────┼──────┼───────┼─────────┤   ├─────────┼──────────┼───────┼─────────────┼──────────────┼─────┴─────────┘
@@ -93,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_RAISE] = LAYOUT_sinh_x_58(
       _______ , _______ , _______ , _______ , _______ , _______ ,                         _______ , _______  , _______ , _______         , _______ , _______   ,
       _______ , KC_INS  , KC_PSCR , KC_APP  , XXXXXXX , KC_CAPS ,                         KC_PGUP , KC_PRVWD , KC_UP   , KC_NXTWD        , XXXXXXX , XXXXXXX   ,
-      _______ , KC_LALT , KC_LCTL , KC_LSFT , XXXXXXX , XXXXXXX ,                         KC_PGDN , KC_LEFT  , KC_DOWN , RCTL_T(KC_RGHT) , XXXXXXX , C(KC_BSPC),
+      _______ , XXXXXXX , KC_LCTL , KC_LALT , KC_LSFT , KC_LGUI ,                         KC_PGDN , KC_LEFT  , KC_DOWN , RCTL_T(KC_RGHT) , XXXXXXX , C(KC_BSPC),
       _______ , C(KC_Z) , C(KC_X) , C(KC_C) , C(KC_V) , KC_AGIN , _______ ,     _______ , KC_WBAK , KC_LSTRT , KC_WFWD , KC_LEND         , XXXXXXX , _______   ,
                           _______ , _______ , _______ , _______ , TL_LOWR ,     TL_UPPR , _______ , _______  , _______ , _______
 ),
