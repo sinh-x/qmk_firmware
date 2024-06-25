@@ -23,6 +23,7 @@ enum custom_keycodes {
     KC_ALTF1,
     KC_WEB1,
     KC_WEB2,
+    KC_SGF5,
 };
 
 // Tap Dance declarations
@@ -50,14 +51,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //        ├────────┼───┼───────────┼───────────┼───────────┼───────────┼────────────┐   ┌───────┼────────────┼───────────┼───────────┼───────────┼───┼──────┤
 //        │ SH_MON │ x │     c     │     d     │     v     │     z     │    mute    │   │  no   │     /      │     k     │     h     │     ,     │ . │ rsft │
 //        └────────┴───┼───────────┼───────────┼───────────┼───────────┼────────────┤   ├───────┼────────────┼───────────┼───────────┼───────────┼───┴──────┘
-//                     │  TL_UPPR  │   TT(4)   │   TT(5)   │   TT(4)   │ LT(1, spc) │   │ MO(2) │ LT(4, ent) │   TT(5)   │  SH_TOGG  │  TL_LOWR  │
+//                     │  TL_UPPR  │    no     │   TT(5)   │   TT(4)   │ LT(1, spc) │   │ MO(2) │ LT(4, ent) │   TT(5)   │  SH_TOGG  │  TL_LOWR  │
 //                     └───────────┴───────────┴───────────┴───────────┴────────────┘   └───────┴────────────┴───────────┴───────────┴───────────┘
 [_COLEMAK] = LAYOUT_sinh_x_58(
       KC_GRV , KC_1 , KC_2         , KC_3         , KC_4         , KC_5         ,                               KC_6          , KC_7         , KC_8         , KC_9         , KC_0    , KC_EQL ,
       KC_TAB , KC_Q , KC_W         , KC_F         , KC_P         , KC_B         ,                               KC_J          , KC_L         , KC_U         , KC_Y         , KC_SCLN , KC_QUOT,
       KC_ESC , KC_A , LCTL_T(KC_R) , LALT_T(KC_S) , LSFT_T(KC_T) , LGUI_T(KC_G) ,                               RGUI_T(KC_M)  , RSFT_T(KC_N) , RALT_T(KC_E) , RCTL_T(KC_I) , KC_O    , KC_BSPC,
       SH_MON , KC_X , KC_C         , KC_D         , KC_V         , KC_Z         , KC_MUTE       ,     XXXXXXX , KC_SLSH       , KC_K         , KC_H         , KC_COMM      , KC_DOT  , KC_RSFT,
-                      TL_UPPR      , TT(4)        , TT(5)        , TT(4)        , LT(1, KC_SPC) ,     MO(2)   , LT(4, KC_ENT) , TT(5)        , SH_TOGG      , TL_LOWR
+                      TL_UPPR      , XXXXXXX      , TT(5)        , TT(4)        , LT(1, KC_SPC) ,     MO(2)   , LT(4, KC_ENT) , TT(5)        , SH_TOGG      , TL_LOWR
 ),
 
 //        ┌──────┬────┬───────────┬───────────┬───────────┬───────────┐                       ┌───────────┬───────────┬───────────┬───────────┬─────┬─────┐
@@ -120,9 +121,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //        ┌────┬───────┬──────┬──────┬──────┬───────┐               ┌──────┬──────┬──────┬──────┬──────┬────┐
 //        │ no │  no   │  no  │  no  │  no  │  no   │               │  no  │  no  │  no  │  no  │  no  │ no │
 //        ├────┼───────┼──────┼──────┼──────┼───────┤               ├──────┼──────┼──────┼──────┼──────┼────┤
-//        │ no │ cSF12 │ wEB1 │ wEB2 │  ~   │ aLTF1 │               │ wh_u │ btn1 │ ms_u │ btn2 │ btn3 │ no │
+//        │ no │ cSF12 │ wEB1 │ wEB2 │  no  │ aLTF1 │               │ wh_u │ btn1 │ ms_u │ btn2 │ btn3 │ no │
 //        ├────┼───────┼──────┼──────┼──────┼───────┤               ├──────┼──────┼──────┼──────┼──────┼────┤
-//        │ no │  no   │  no  │  no  │  no  │  no   │               │ wh_d │ ms_l │ ms_d │ ms_r │  no  │ no │
+//        │ no │  no   │  no  │  no  │  no  │ sGF5  │               │ wh_d │ ms_l │ ms_d │ ms_r │  no  │ no │
 //        ├────┼───────┼──────┼──────┼──────┼───────┼─────┐   ┌─────┼──────┼──────┼──────┼──────┼──────┼────┤
 //        │ no │ lctl  │ btn1 │ btn2 │ btn3 │  no   │ no  │   │ no  │  no  │  no  │  no  │  no  │ rctl │ no │
 //        └────┴───────┼──────┼──────┼──────┼───────┼─────┤   ├─────┼──────┼──────┼──────┼──────┼──────┴────┘
@@ -130,8 +131,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                     └──────┴──────┴──────┴───────┴─────┘   └─────┴──────┴──────┴──────┴──────┘
 [_MOUSE] = LAYOUT_sinh_x_58(
       XXXXXXX , XXXXXXX  , XXXXXXX    , XXXXXXX    , XXXXXXX    , XXXXXXX  ,                         XXXXXXX       , XXXXXXX    , XXXXXXX    , XXXXXXX     , XXXXXXX    , XXXXXXX,
-      XXXXXXX , KC_CSF12 , KC_WEB1    , KC_WEB2    , KC_TILD    , KC_ALTF1 ,                         KC_MS_WH_UP   , KC_MS_BTN1 , KC_MS_UP   , KC_MS_BTN2  , KC_MS_BTN3 , XXXXXXX,
-      XXXXXXX , XXXXXXX  , XXXXXXX    , XXXXXXX    , XXXXXXX    , XXXXXXX  ,                         KC_MS_WH_DOWN , KC_MS_LEFT , KC_MS_DOWN , KC_MS_RIGHT , XXXXXXX    , XXXXXXX,
+      XXXXXXX , KC_CSF12 , KC_WEB1    , KC_WEB2    , XXXXXXX    , KC_ALTF1 ,                         KC_MS_WH_UP   , KC_MS_BTN1 , KC_MS_UP   , KC_MS_BTN2  , KC_MS_BTN3 , XXXXXXX,
+      XXXXXXX , XXXXXXX  , XXXXXXX    , XXXXXXX    , XXXXXXX    , KC_SGF5  ,                         KC_MS_WH_DOWN , KC_MS_LEFT , KC_MS_DOWN , KC_MS_RIGHT , XXXXXXX    , XXXXXXX,
       XXXXXXX , KC_LCTL  , KC_MS_BTN1 , KC_MS_BTN2 , KC_MS_BTN3 , XXXXXXX  , XXXXXXX ,     XXXXXXX , XXXXXXX       , XXXXXXX    , XXXXXXX    , XXXXXXX     , KC_RCTL    , XXXXXXX,
                            _______    , _______    , _______    , _______  , _______ ,     _______ , _______       , _______    , _______    , _______
 ),
@@ -313,6 +314,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {
                 unregister_mods(mod_config(MOD_MASK_CS));
                 unregister_code(KC_F12);
+            }
+           break;
+        // Define Ctrl_Shift_F12 - map to open floating terminal in bspmw sxhkc
+        case KC_SGF5:
+            if (record->event.pressed) {
+                register_mods(mod_config(MOD_MASK_SG));
+                register_code(KC_F5);
+            } else {
+                unregister_mods(mod_config(MOD_MASK_SG));
+                unregister_code(KC_F5);
             }
            break;
         // Define Alt_F11 - map to open application launcher in bspmw
