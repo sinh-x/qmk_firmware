@@ -23,7 +23,14 @@ enum custom_keycodes {
     KC_ALTF1,
     KC_WEB1,
     KC_WEB2,
-    KC_SGF5,
+    KC_CGF1,
+    KC_CGF2,
+    KC_CGF3,
+    KC_CGF4,
+    KC_CGF5,
+    KC_CGF6,
+    KC_CGF11,
+    KC_CGF12,
 };
 
 // Tap Dance declarations
@@ -118,22 +125,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           _______ , _______ , _______ , _______ , _______ ,     _______ , _______ , _______ , _______ , _______
 ),
 
-//        ┌────┬───────┬──────┬──────┬──────┬───────┐               ┌──────┬──────┬──────┬──────┬──────┬────┐
-//        │ no │  no   │  no  │  no  │  no  │  no   │               │  no  │  no  │  no  │  no  │  no  │ no │
-//        ├────┼───────┼──────┼──────┼──────┼───────┤               ├──────┼──────┼──────┼──────┼──────┼────┤
-//        │ no │ cSF12 │ wEB1 │ wEB2 │  no  │ aLTF1 │               │ wh_u │ btn1 │ ms_u │ btn2 │ btn3 │ no │
-//        ├────┼───────┼──────┼──────┼──────┼───────┤               ├──────┼──────┼──────┼──────┼──────┼────┤
-//        │ no │  no   │  no  │  no  │  no  │ sGF5  │               │ wh_d │ ms_l │ ms_d │ ms_r │  no  │ no │
-//        ├────┼───────┼──────┼──────┼──────┼───────┼─────┐   ┌─────┼──────┼──────┼──────┼──────┼──────┼────┤
-//        │ no │ lctl  │ btn1 │ btn2 │ btn3 │  no   │ no  │   │ no  │  no  │  no  │  no  │  no  │ rctl │ no │
-//        └────┴───────┼──────┼──────┼──────┼───────┼─────┤   ├─────┼──────┼──────┼──────┼──────┼──────┴────┘
-//                     │      │      │      │       │     │   │     │      │      │      │      │
-//                     └──────┴──────┴──────┴───────┴─────┘   └─────┴──────┴──────┴──────┴──────┘
+//        ┌──────┬───────┬──────┬──────┬──────┬───────┐               ┌──────┬──────┬──────┬──────┬───────┬───────┐
+//        │  no  │  no   │  no  │  no  │  no  │  no   │               │  no  │  no  │  no  │  no  │  no   │  no   │
+//        ├──────┼───────┼──────┼──────┼──────┼───────┤               ├──────┼──────┼──────┼──────┼───────┼───────┤
+//        │  no  │ cSF12 │ wEB1 │ wEB2 │  no  │ aLTF1 │               │ wh_u │ btn1 │ ms_u │ btn2 │ btn3  │  no   │
+//        ├──────┼───────┼──────┼──────┼──────┼───────┤               ├──────┼──────┼──────┼──────┼───────┼───────┤
+//        │ cGF1 │ cGF2  │ cGF3 │ cGF4 │ cGF5 │ cGF6  │               │ wh_d │ ms_l │ ms_d │ ms_r │ cGF11 │ cGF12 │
+//        ├──────┼───────┼──────┼──────┼──────┼───────┼─────┐   ┌─────┼──────┼──────┼──────┼──────┼───────┼───────┤
+//        │  no  │ lctl  │ btn1 │ btn2 │ btn3 │  no   │ no  │   │ no  │  no  │  no  │  no  │  no  │ rctl  │  no   │
+//        └──────┴───────┼──────┼──────┼──────┼───────┼─────┤   ├─────┼──────┼──────┼──────┼──────┼───────┴───────┘
+//                       │      │      │      │       │     │   │     │      │      │      │      │
+//                       └──────┴──────┴──────┴───────┴─────┘   └─────┴──────┴──────┴──────┴──────┘
 [_MOUSE] = LAYOUT_sinh_x_58(
-      XXXXXXX , XXXXXXX  , XXXXXXX    , XXXXXXX    , XXXXXXX    , XXXXXXX  ,                         XXXXXXX       , XXXXXXX    , XXXXXXX    , XXXXXXX     , XXXXXXX    , XXXXXXX,
-      XXXXXXX , KC_CSF12 , KC_WEB1    , KC_WEB2    , XXXXXXX    , KC_ALTF1 ,                         KC_MS_WH_UP   , KC_MS_BTN1 , KC_MS_UP   , KC_MS_BTN2  , KC_MS_BTN3 , XXXXXXX,
-      XXXXXXX , XXXXXXX  , XXXXXXX    , XXXXXXX    , XXXXXXX    , KC_SGF5  ,                         KC_MS_WH_DOWN , KC_MS_LEFT , KC_MS_DOWN , KC_MS_RIGHT , XXXXXXX    , XXXXXXX,
-      XXXXXXX , KC_LCTL  , KC_MS_BTN1 , KC_MS_BTN2 , KC_MS_BTN3 , XXXXXXX  , XXXXXXX ,     XXXXXXX , XXXXXXX       , XXXXXXX    , XXXXXXX    , XXXXXXX     , KC_RCTL    , XXXXXXX,
+      XXXXXXX , XXXXXXX  , XXXXXXX    , XXXXXXX    , XXXXXXX    , XXXXXXX  ,                         XXXXXXX       , XXXXXXX    , XXXXXXX    , XXXXXXX     , XXXXXXX    , XXXXXXX ,
+      XXXXXXX , KC_CSF12 , KC_WEB1    , KC_WEB2    , XXXXXXX    , KC_ALTF1 ,                         KC_MS_WH_UP   , KC_MS_BTN1 , KC_MS_UP   , KC_MS_BTN2  , KC_MS_BTN3 , XXXXXXX ,
+      KC_CGF1 , KC_CGF2  , KC_CGF3    , KC_CGF4    , KC_CGF5    , KC_CGF6  ,                         KC_MS_WH_DOWN , KC_MS_LEFT , KC_MS_DOWN , KC_MS_RIGHT , KC_CGF11   , KC_CGF12,
+      XXXXXXX , KC_LCTL  , KC_MS_BTN1 , KC_MS_BTN2 , KC_MS_BTN3 , XXXXXXX  , XXXXXXX ,     XXXXXXX , XXXXXXX       , XXXXXXX    , XXXXXXX    , XXXXXXX     , KC_RCTL    , XXXXXXX ,
                            _______    , _______    , _______    , _______  , _______ ,     _______ , _______       , _______    , _______    , _______
 ),
 
@@ -157,6 +164,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 )
 };
 
+void handle_key_with_mod(uint16_t keycode, uint8_t mod, keyrecord_t *record) {
+    if (record->event.pressed) {
+        register_mods(mod);
+        register_code(keycode);
+    } else {
+        unregister_mods(mod);
+        unregister_code(keycode);
+    }
+}
 uint8_t mod_state;
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // Store the current modifier state in the variable for later reference
@@ -288,44 +304,41 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
         // Define WEB1 = Shift_GUI_W - mapped to bspwm-sxhkc open chrome profile 1
         case KC_WEB1:
-            if (record->event.pressed) {
-                register_mods(mod_config(MOD_MASK_SG));
-                register_code(KC_W);
-            } else {
-                unregister_mods(mod_config(MOD_MASK_SG));
-                unregister_code(KC_W);
-            }
-           break;
+            handle_key_with_mod(KC_W, MOD_MASK_SG, record);
+            break;
         // Define WEB2 = Ctrl_Shift_GUI_W - mapped to bspwm-sxhkc open chrome profile 2
         case KC_WEB2:
-            if (record->event.pressed) {
-                register_mods(mod_config(MOD_MASK_CSG));
-                register_code(KC_W);
-            } else {
-                unregister_mods(mod_config(MOD_MASK_CSG));
-                unregister_code(KC_W);
-            }
-           break;
+            handle_key_with_mod(KC_W, MOD_MASK_CSG, record);
+            break;
         // Define Ctrl_Shift_F12 - map to open floating terminal in bspmw sxhkc
         case KC_CSF12:
-            if (record->event.pressed) {
-                register_mods(mod_config(MOD_MASK_CS));
-                register_code(KC_F12);
-            } else {
-                unregister_mods(mod_config(MOD_MASK_CS));
-                unregister_code(KC_F12);
-            }
-           break;
-        // Define Ctrl_Shift_F12 - map to open floating terminal in bspmw sxhkc
-        case KC_SGF5:
-            if (record->event.pressed) {
-                register_mods(mod_config(MOD_MASK_SG));
-                register_code(KC_F5);
-            } else {
-                unregister_mods(mod_config(MOD_MASK_SG));
-                unregister_code(KC_F5);
-            }
-           break;
+            handle_key_with_mod(KC_F12, MOD_MASK_CS, record);
+            break;
+        // Define Super_Shift_F__ - map to open floating terminal in bspmw sxhkc
+        case KC_CGF1:
+            handle_key_with_mod(KC_F1, MOD_MASK_CG, record);
+            break;
+        case KC_CGF2:
+            handle_key_with_mod(KC_F2, MOD_MASK_CG, record);
+            break;
+        case KC_CGF3:
+            handle_key_with_mod(KC_F3, MOD_MASK_CG, record);
+            break;
+        case KC_CGF4:
+            handle_key_with_mod(KC_F4, MOD_MASK_CG, record);
+            break;
+        case KC_CGF5:
+            handle_key_with_mod(KC_F5, MOD_MASK_CG, record);
+            break;
+        case KC_CGF6:
+            handle_key_with_mod(KC_F6, MOD_MASK_CG, record);
+            break;
+        case KC_CGF11:
+            handle_key_with_mod(KC_F11, MOD_MASK_CG, record);
+            break;
+        case KC_CGF12:
+            handle_key_with_mod(KC_F12, MOD_MASK_CG, record);
+            break;
         // Define Alt_F11 - map to open application launcher in bspmw
         case KC_ALTF1:
             if (record->event.pressed) {
@@ -335,7 +348,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 unregister_mods(mod_config(MOD_MASK_ALT));
                 unregister_code(KC_F1);
             }
-           break;
+            break;
         // Dfefin Del when press Shift + Backspace
         case KC_BSPC:
         {
