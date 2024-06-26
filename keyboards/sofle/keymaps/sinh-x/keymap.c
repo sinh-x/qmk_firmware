@@ -68,23 +68,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                       TL_UPPR      , XXXXXXX      , TT(5)        , LT(4, KC_SPC) , MO(1)   ,     MO(2)   , LT(4, KC_ENT) , TT(5)        , SH_TOGG      , TL_LOWR
 ),
 
-//        ┌──────┬────┬──────────────┬───────────┬───────────┬───────────┐                       ┌───────────┬───────────┬───────────┬───────────┬─────┬─────┐
-//        │      │ f1 │      f2      │    f3     │    f4     │    f5     │                       │    f6     │    f7     │    f8     │    f9     │ f10 │ f11 │
-//        ├──────┼────┼──────────────┼───────────┼───────────┼───────────┤                       ├───────────┼───────────┼───────────┼───────────┼─────┼─────┤
-//        │ calc │ ~  │     kp_+     │     -     │   kp_*    │     /     │                       │     $     │     <     │     |     │     >     │  `  │ f12 │
-//        ├──────┼────┼──────────────┼───────────┼───────────┼───────────┤                       ├───────────┼───────────┼───────────┼───────────┼─────┼─────┤
-//        │ esc  │ 1  │ LCTL_T(kp_2) │ LALT_T(3) │ LSFT_T(4) │ LGUI_T(5) │                       │ RGUI_T(6) │ RSFT_T(7) │ RALT_T(8) │ RCTL_T(9) │  0  │     │
-//        ├──────┼────┼──────────────┼───────────┼───────────┼───────────┼─────────┐   ┌─────────┼───────────┼───────────┼───────────┼───────────┼─────┼─────┤
-//        │      │ _  │      [       │     {     │     (     │     =     │         │   │         │     \     │     )     │     }     │     ]     │  @  │     │
-//        └──────┴────┼──────────────┼───────────┼───────────┼───────────┼─────────┤   ├─────────┼───────────┼───────────┼───────────┼───────────┼─────┴─────┘
-//                    │              │           │           │           │ TL_LOWR │   │ TL_UPPR │           │           │           │           │
-//                    └──────────────┴───────────┴───────────┴───────────┴─────────┘   └─────────┴───────────┴───────────┴───────────┴───────────┘
+//        ┌──────┬────┬───────────┬───────────┬───────────┬───────────┐                       ┌───────────┬───────────┬───────────┬───────────┬─────┬─────┐
+//        │      │ f1 │    f2     │    f3     │    f4     │    f5     │                       │    f6     │    f7     │    f8     │    f9     │ f10 │ f11 │
+//        ├──────┼────┼───────────┼───────────┼───────────┼───────────┤                       ├───────────┼───────────┼───────────┼───────────┼─────┼─────┤
+//        │ calc │ ~  │   kp_+    │     -     │   kp_*    │     /     │                       │     $     │     <     │     |     │     >     │  `  │ f12 │
+//        ├──────┼────┼───────────┼───────────┼───────────┼───────────┤                       ├───────────┼───────────┼───────────┼───────────┼─────┼─────┤
+//        │ esc  │ 1  │ LCTL_T(2) │ LALT_T(3) │ LSFT_T(4) │ LGUI_T(5) │                       │ RGUI_T(6) │ RSFT_T(7) │ RALT_T(8) │ RCTL_T(9) │  0  │     │
+//        ├──────┼────┼───────────┼───────────┼───────────┼───────────┼─────────┐   ┌─────────┼───────────┼───────────┼───────────┼───────────┼─────┼─────┤
+//        │      │ _  │     [     │     {     │     (     │     =     │         │   │         │     \     │     )     │     }     │     ]     │  @  │     │
+//        └──────┴────┼───────────┼───────────┼───────────┼───────────┼─────────┤   ├─────────┼───────────┼───────────┼───────────┼───────────┼─────┴─────┘
+//                    │           │           │           │           │ TL_LOWR │   │ TL_UPPR │           │           │           │           │
+//                    └───────────┴───────────┴───────────┴───────────┴─────────┘   └─────────┴───────────┴───────────┴───────────┴───────────┘
 [_LOWER] = LAYOUT_sinh_x_58(
-      _______ , KC_F1   , KC_F2         , KC_F3        , KC_F4        , KC_F5        ,                         KC_F6        , KC_F7        , KC_F8        , KC_F9        , KC_F10 , KC_F11 ,
-      KC_CALC , KC_TILD , KC_PPLS       , KC_MINS      , KC_PAST      , KC_SLSH      ,                         KC_DLR       , KC_LT        , KC_PIPE      , KC_GT        , KC_GRV , KC_F12 ,
-      KC_ESC  , KC_1    , LCTL_T(KC_P2) , LALT_T(KC_3) , LSFT_T(KC_4) , LGUI_T(KC_5) ,                         RGUI_T(KC_6) , RSFT_T(KC_7) , RALT_T(KC_8) , RCTL_T(KC_9) , KC_0   , _______,
-      _______ , KC_UNDS , KC_LBRC       , KC_LCBR      , KC_LPRN      , KC_EQL       , _______ ,     _______ , KC_BSLS      , KC_RPRN      , KC_RCBR      , KC_RBRC      , KC_AT  , _______,
-                          _______       , _______      , _______      , _______      , TL_LOWR ,     TL_UPPR , _______      , _______      , _______      , _______
+      _______ , KC_F1   , KC_F2        , KC_F3        , KC_F4        , KC_F5        ,                         KC_F6        , KC_F7        , KC_F8        , KC_F9        , KC_F10 , KC_F11 ,
+      KC_CALC , KC_TILD , KC_PPLS      , KC_MINS      , KC_PAST      , KC_SLSH      ,                         KC_DLR       , KC_LT        , KC_PIPE      , KC_GT        , KC_GRV , KC_F12 ,
+      KC_ESC  , KC_1    , LCTL_T(KC_2) , LALT_T(KC_3) , LSFT_T(KC_4) , LGUI_T(KC_5) ,                         RGUI_T(KC_6) , RSFT_T(KC_7) , RALT_T(KC_8) , RCTL_T(KC_9) , KC_0   , _______,
+      _______ , KC_UNDS , KC_LBRC      , KC_LCBR      , KC_LPRN      , KC_EQL       , _______ ,     _______ , KC_BSLS      , KC_RPRN      , KC_RCBR      , KC_RBRC      , KC_AT  , _______,
+                          _______      , _______      , _______      , _______      , TL_LOWR ,     TL_UPPR , _______      , _______      , _______      , _______
 ),
 
 //        ┌─────┬──────┬──────┬──────┬──────┬───────┐                       ┌──────────┬───────┬─────────────┬──────────────┬─────┬─────────┐
@@ -253,56 +253,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             break;
-        // Intercepting Mod-Taps for shifted keys
-        case LGUI_T(KC_RBRC):
-            if (record->tap.count && record->event.pressed) {
-                tap_code16(KC_RBRC);
-                return false;
-            }
-            break;
-        case RGUI_T(KC_RBRC):
-            if (record->tap.count && record->event.pressed) {
-                tap_code16(KC_RBRC);
-                return false;
-            }
-            break;
-        case LSFT_T(KC_RCBR):
-            if (record->tap.count && record->event.pressed) {
-                tap_code16(KC_RCBR);
-                return false;
-            }
-            break;
-        case RSFT_T(KC_RCBR):
-            if (record->tap.count && record->event.pressed) {
-                tap_code16(KC_RCBR);
-                return false;
-            }
-            break;
-        case LALT_T(KC_RPRN):
-            if (record->tap.count && record->event.pressed) {
-                tap_code16(KC_RPRN);
-                return false;
-            }
-            break;
-        case RALT_T(KC_RPRN):
-            if (record->tap.count && record->event.pressed) {
-                tap_code16(KC_RPRN);
-                return false;
-            }
-            break;
-        case LCTL_T(KC_AT):
-            if (record->tap.count && record->event.pressed) {
-                tap_code16(KC_AT);
-                return false;
-            }
-            break;
-        case RCTL_T(KC_AT):
-            if (record->tap.count && record->event.pressed) {
-                tap_code16(KC_AT);
-                return false;
-            }
-            break;
-        // Define WEB1 = Shift_GUI_W - mapped to bspwm-sxhkc open chrome profile 1
+       // Define WEB1 = Shift_GUI_W - mapped to bspwm-sxhkc open chrome profile 1
         case KC_WEB1:
             handle_key_with_mod(KC_W, MOD_MASK_SG, record);
             break;
