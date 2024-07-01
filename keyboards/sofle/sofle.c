@@ -117,9 +117,9 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         }
     } else if (index == 1) {
         if (clockwise) {
-            tap_code(KC_PGDN);
+            tap_code(KC_F23);
         } else {
-            tap_code(KC_PGUP);
+            tap_code(KC_F24);
         }
     }
     return true;
