@@ -117,9 +117,9 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         }
     } else if (index == 1) {
         if (clockwise) {
-            tap_code(KC_F23);
+            tap_code(KC_F15);
         } else {
-            tap_code(KC_F24);
+            tap_code(KC_F14);
         }
     }
     return true;
