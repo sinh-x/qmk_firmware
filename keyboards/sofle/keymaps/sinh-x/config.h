@@ -9,9 +9,15 @@
 
 //// For Inertia QMK mouse mode ////
 #define MOUSEKEY_INERTIA udefined // Enable Inertia mode
-#define MOUSEKEY_DELAY 150        // Delay between pressing a movement key and cursor movement
-#define MOUSEKEY_INTERVAL 16      // Time between cursor movements in milliseconds (16 = 60fps)
-#define MOUSEKEY_MAX_SPEED 48     // Maximum cursor speed at which acceleration stops
-#define MOUSEKEY_TIME_TO_MAX 32   // Number of frames until maximum cursor speed is reached
-#define MOUSEKEY_FRICTION 12      // How quickly the cursor stops after releasing a key
-#define MOUSEKEY_MOVE_DELTA 1     // How much to move on first frame (1 strongly recommended)
+#undef MOUSEKEY_DELAY
+#define MOUSEKEY_DELAY          0
+#undef MOUSEKEY_INTERVAL
+#define MOUSEKEY_INTERVAL      16
+#undef MOUSEKEY_MAX_SPEED
+#define MOUSEKEY_MAX_SPEED     32
+#undef MOUSEKEY_WHEEL_DELAY
+#define MOUSEKEY_WHEEL_DELAY    0
+#undef MOUSEKEY_TIME_TO_MAX
+#define MOUSEKEY_TIME_TO_MAX   64
+#define MOUSEKEY_FRICTION       6      // How quickly the cursor stops after releasing a key
+#define MOUSEKEY_MOVE_DELTA     1     // How much to move on first frame (1 strongly recommended)
