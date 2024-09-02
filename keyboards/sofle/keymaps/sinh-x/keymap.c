@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //        ├────────┼───┼───────────┼───────────┼───────────┼────────────┤                   ├─────────────┼───────────┼───────────┼───────────┼───┼──────┤
 //        │  esc   │ a │ LCTL_T(r) │ LALT_T(s) │ LSFT_T(t) │ LGUI_T(g)  │                   │  RGUI_T(m)  │ RSFT_T(n) │ RALT_T(e) │ RCTL_T(i) │ o │ bspc │
 //        ├────────┼───┼───────────┼───────────┼───────────┼────────────┼───────┐   ┌───────┼─────────────┼───────────┼───────────┼───────────┼───┼──────┤
-//        │ SH_MON │ x │     c     │     d     │     v     │     z      │ mute  │   │  no   │      /      │     k     │     h     │     ,     │ . │ rsft │
+//        │ SH_MON │ x │     c     │     d     │     v     │     z      │ mute  │   │  no   │      /      │     k     │     h     │     ,     │ . │ del  │
 //        └────────┴───┼───────────┼───────────┼───────────┼────────────┼───────┤   ├───────┼─────────────┼───────────┼───────────┼───────────┼───┴──────┘
 //                     │  TL_UPPR  │    no     │   TT(5)   │ LT(4, spc) │ MO(1) │   │ MO(2) │ LSFT_T(ent) │   TT(4)   │  SH_TOGG  │  TL_LOWR  │
 //                     └───────────┴───────────┴───────────┴────────────┴───────┘   └───────┴─────────────┴───────────┴───────────┴───────────┘
@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_GRV , KC_1 , KC_2         , KC_3         , KC_4         , KC_5          ,                         KC_6           , KC_7         , KC_8         , KC_9         , KC_0    , KC_EQL ,
       KC_TAB , KC_Q , KC_W         , KC_F         , KC_P         , KC_B          ,                         KC_J           , KC_L         , KC_U         , KC_Y         , KC_SCLN , KC_QUOT,
       KC_ESC , KC_A , LCTL_T(KC_R) , LALT_T(KC_S) , LSFT_T(KC_T) , LGUI_T(KC_G)  ,                         RGUI_T(KC_M)   , RSFT_T(KC_N) , RALT_T(KC_E) , RCTL_T(KC_I) , KC_O    , KC_BSPC,
-      SH_MON , KC_X , KC_C         , KC_D         , KC_V         , KC_Z          , KC_MUTE ,     XXXXXXX , KC_SLSH        , KC_K         , KC_H         , KC_COMM      , KC_DOT  , KC_RSFT,
+      SH_MON , KC_X , KC_C         , KC_D         , KC_V         , KC_Z          , KC_MUTE ,     XXXXXXX , KC_SLSH        , KC_K         , KC_H         , KC_COMM      , KC_DOT  , KC_DEL ,
                       TL_UPPR      , XXXXXXX      , TT(5)        , LT(4, KC_SPC) , MO(1)   ,     MO(2)   , LSFT_T(KC_ENT) , TT(4)        , SH_TOGG      , TL_LOWR
 ),
 
@@ -94,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //        ├─────┼──────┼──────┼──────┼──────┼───────┤                       ├───────┼───────┼──────────┼─────────────┼─────┼─────────┤
 //        │     │  no  │ lctl │ lalt │ lsft │ lgui  │                       │ pgdn  │ left  │   down   │    rght     │ no  │ C(bspc) │
 //        ├─────┼──────┼──────┼──────┼──────┼───────┼─────────┐   ┌─────────┼───────┼───────┼──────────┼─────────────┼─────┼─────────┤
-//        │     │ C(z) │ C(x) │ C(c) │ C(v) │ again │         │   │         │ lSTRT │ lEND  │ www_back │ www_forward │ no  │         │
+//        │     │ C(z) │ C(x) │ C(c) │ C(v) │ again │         │   │         │ lSTRT │ lEND  │ www_back │ www_forward │ no  │ C(del)  │
 //        └─────┴──────┼──────┼──────┼──────┼───────┼─────────┤   ├─────────┼───────┼───────┼──────────┼─────────────┼─────┴─────────┘
 //                     │      │      │      │       │ TL_LOWR │   │ TL_UPPR │       │       │          │             │
 //                     └──────┴──────┴──────┴───────┴─────────┘   └─────────┴───────┴───────┴──────────┴─────────────┘
@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______ , _______ , _______ , _______ , _______ , _______ ,                         _______  , _______  , _______ , _______  , _______ , _______   ,
       _______ , KC_CAPS , KC_PSCR , XXXXXXX , KC_APP  , XXXXXXX ,                         KC_PGUP  , KC_PRVWD , KC_UP   , KC_NXTWD , XXXXXXX , XXXXXXX   ,
       _______ , XXXXXXX , KC_LCTL , KC_LALT , KC_LSFT , KC_LGUI ,                         KC_PGDN  , KC_LEFT  , KC_DOWN , KC_RGHT  , XXXXXXX , C(KC_BSPC),
-      _______ , C(KC_Z) , C(KC_X) , C(KC_C) , C(KC_V) , KC_AGIN , _______ ,     _______ , KC_LSTRT , KC_LEND  , KC_WBAK , KC_WFWD  , XXXXXXX , _______   ,
+      _______ , C(KC_Z) , C(KC_X) , C(KC_C) , C(KC_V) , KC_AGIN , _______ ,     _______ , KC_LSTRT , KC_LEND  , KC_WBAK , KC_WFWD  , XXXXXXX , C(KC_DEL) ,
                           _______ , _______ , _______ , _______ , TL_LOWR ,     TL_UPPR , _______  , _______  , _______ , _______
 ),
 
