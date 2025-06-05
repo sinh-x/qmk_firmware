@@ -16,50 +16,78 @@
       system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+
+        # Create a Python environment with QMK dependencies
+        pythonEnv = pkgs.python3.withPackages (
+          ps: with ps; [
+            pip
+            setuptools
+            wheel
+            pyserial
+            pyusb
+            pillow
+            hjson
+            jsonschema
+            colorama
+            pygments
+            appdirs
+            argcomplete
+            hid
+            milc
+            # Add any other Python packages QMK might need
+          ]
+        );
       in
       {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            # QMK and Python packages
+            # Core QMK
             qmk
-            python3
-            python3Packages.qmk
-            python3Packages.appdirs
-            python3Packages.argcomplete
-            python3Packages.colorama
-            python3Packages.hid
-            python3Packages.hjson
-            python3Packages.jsonschema
-            python3Packages.milc
-            python3Packages.pygments
-            python3Packages.pyserial
-            python3Packages.pyusb
-            python3Packages.pillow
 
-            # Compilers and flashing tools
+            # Python environment with all dependencies
+            pythonEnv
+
+            # AVR toolchain
+            pkgsCross.avr.buildPackages.gcc
+            pkgsCross.avr.buildPackages.binutils
+            pkgsCross.avr.avrlibc
+
+            # ARM toolchain
             gcc-arm-embedded
-            avr-gcc
-            avrlibc
-            avrdude
+
+            # Flashing tools
             dfu-util
             dfu-programmer
             teensy-loader-cli
+            avrdude
 
-            # Additional tools
+            # Build tools
             git
             gnumake
           ];
 
           shellHook = ''
             echo "QMK development environment loaded!"
-            echo "Available commands:"
-            echo "  qmk setup"
-            echo "  qmk compile -kb sofle -km sinh-x"
-            echo "  qmk flash -kb sofle -km sinh-x"
 
-            # Set QMK home if not already set
+            # Set QMK home
             export QMK_HOME=''${QMK_HOME:-$(pwd)}
             echo "QMK_HOME: $QMK_HOME"
+
+            # Create a local virtual environment for any additional packages
+            if [ ! -d ".venv" ]; then
+              python -m venv .venv
+              source .venv/bin/activate
+              echo "Created virtual environment in .venv"
+            else
+              source .venv/bin/activate
+              echo "Activated existing virtual environment"
+            fi
+
+            echo "Available compilers:"
+            echo "  avr-gcc (from pkgsCross.avr)"
+            echo "  arm-none-eabi-gcc (from gcc-arm-embedded)"
+            echo ""
+            echo "Try running 'qmk setup' now"
           '';
         };
       }
